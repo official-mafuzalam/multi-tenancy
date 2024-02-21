@@ -59,6 +59,8 @@ return [
 
     'asset_url' => env('ASSET_URL'),
 
+    'domain' => env('APP_DOMAIN', 'localhost'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -168,6 +170,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TenancyServiceProvider::class, // <-- here
     ])->toArray(),
 
     /*
